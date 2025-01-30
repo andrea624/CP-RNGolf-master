@@ -67,7 +67,7 @@ class Play extends Phaser.Scene {
         // add pointer input
         this.input.on('pointerdown', (pointer) => {
             let shotDirectionY = pointer.y <= this.ball.y ? 1 : -1
-            let shotDirectionX = pointer.x < this.ball.x ? -1 : 1
+            let shotDirectionX = pointer.x < this.ball.x ? 1 : -1
             this.ball.body.setVelocityX(Phaser.Math.Between(-this.SHOT_VELOCITY_X, this.SHOT_VELOCITY_X)* shotDirectionX)
             this.ball.body.setVelocityY(Phaser.Math.Between(this.SHOT_VELOCITY_Y_MIN, this.SHOT_VELOCITY_Y_MAX) * shotDirectionY)
 
